@@ -6,8 +6,8 @@ const allowedUsers = config.allowedUsers;
 const roles = config.roleToDisco;
 
 disco.on("ready", () => {
-    disco.user.setPresence({ game: { name: `Disco Roles! Created by i am n3k4a` }, type: 0 });
-    console.log("Disco role bot online! Created by i am toast.");
+    disco.user.setPresence({ game: { name: `Disco Roles!` }, type: 0 });
+    console.log("Disco role bot online!.");
 });
 
 disco.on("message", message => {
@@ -43,4 +43,4 @@ if(message.content.startsWith(prefix + "stopdisco")) {
 
 });
 
-disco.login(config.token);
+client.login(process.env.TOKEN);
