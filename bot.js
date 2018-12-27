@@ -45,30 +45,39 @@ client.on("ready", () => {
   setInterval(lol, 6000);
 })
 
-const adminprefix = ".";
-const devs = ['527856613827149839','527862713083232257'];
+var adminprefix = '='
+const developers = ["الاي دي حقك"]
 client.on('message', message => {
-  var argresult = message.content.split(` `).slice(1).join(' ');
-    if (!devs.includes(message.author.id)) return;
-    
-if (message.content.startsWith(adminprefix + 'بلاي')) {
-  client.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
-} else 
-  if (message.content.startsWith(adminprefix + 'نيم')) {
-client.user.setUsername(argresult).then
-    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
-return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+     
+  if (message.content == ("setg")) {
+    client.user.setGame(argresult);
+      message.channel.send(`LastCodes   ${argresult}**`)
+  } else
+     if (message.content === ("leave")) {
+    message.guild.leave();        
+  } else  
+  if (message.content === ("setw")) {
+  client.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.send(`LastCodes   ${argresult}**`)
+  } else
+  if (message.content === ("setl")) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`LastCodes   ${argresult}**`)
+  } else
+  if (message.content === ("sets")) {
+    client.user.setGame(argresult, "https://www.twitch.tv/One");
+      message.channel.send(`LastCodes`)
+  }
+  if (message.content === ("setname")) {
+  client.user.setUsername(argresult).then
+      message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
-  if (message.content.startsWith(adminprefix + 'افتار')) {
-client.user.setAvatar(argresult);
-  message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
-      } else     
-if (message.content.startsWith(adminprefix + 'ستريم')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
-    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
+if (message.content === ("setavatar")) {
+  client.user.setAvatar(argresult);
+    message.channel.send(`Changing The Avatar To :**${argresult}** `);
 }
 });
-
 
 client.login(process.env.TOKEN);// لا تغير فيها شيء
