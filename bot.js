@@ -45,36 +45,36 @@ client.on("ready", () => {
   setInterval(lol, 6000);
 })
 
-var adminprefix = '='
-const developers = ["الاي دي حقك"]
+var adminprefix = '=';
+const developers = ["527856613827149839"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
      
-  if (message.content == ("setg")) {
+  if (message.content.startsWith(adminprefix + 'setg')) {
     client.user.setGame(argresult);
       message.channel.send(`LastCodes   ${argresult}**`)
   } else
-     if (message.content === ("leave")) {
+     if (message.content === (adminprefix + "leave")) {
     message.guild.leave();        
   } else  
-  if (message.content === ("setw")) {
+  if (message.content.startsWith(adminprefix + 'setw')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.send(`LastCodes   ${argresult}**`)
   } else
-  if (message.content === ("setl")) {
+  if (message.content.startsWith(adminprefix + 'setl')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`LastCodes   ${argresult}**`)
   } else
-  if (message.content === ("sets")) {
+  if (message.content.startsWith(adminprefix + 'sets')) {
     client.user.setGame(argresult, "https://www.twitch.tv/One");
       message.channel.send(`LastCodes`)
   }
-  if (message.content === ("setname")) {
+  if (message.content.startsWith(adminprefix + 'setname')) {
   client.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
-if (message.content === ("setavatar")) {
+if (message.content.startsWith(adminprefix + 'setavatar')) {
   client.user.setAvatar(argresult);
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
 }
