@@ -75,6 +75,12 @@ client.on('guildMemberAdd', member => {
   }); 
 });
 
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('514850543227895808').roles.find("name", "Meme").setColor("RANDOM");
+  }
+  setInterval(lol, 6000);
+})
 
 
 client.login(process.env.TOKEN);// لا تغير فيها شيء
