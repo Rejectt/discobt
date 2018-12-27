@@ -45,7 +45,7 @@ client.on("ready", () => {
   setInterval(lol, 6000);
 })
 
-var adminprefix = '=';
+const adminprefix = "-";
 const developers = ["527856613827149839"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
