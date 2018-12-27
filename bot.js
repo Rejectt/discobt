@@ -8,9 +8,9 @@ client.on('ready', () => {
 });
 
 client.on("ready", () => {
-  function meme() {
+  function lol() {
     client.guilds.get('514850543227895808').roles.find("name", "Meme").setColor("RANDOM");
   }
-  setInterval(meme, 6000);
+  setInterval(lol, 6000);
 })
 
