@@ -1,7 +1,6 @@
 {
-  "token" : "NDg2MTIzNTA5MTYxMDAwOTYw.DvGNOA.3tJ-kPW87Jwuz5U5mORQcQCgTDs",
   "ms" : 1500,
-  "roleToDisco" : ["disco", "Rainbow"],
-  "prefix" : "d!",
-  "allowedUsers" : ["462006869834203159", ""]
+  "roleToDisco" : ["disco", "Meme"],
+  "prefix" : "!",
+  "allowedUsers" : ["527854881114161162", ""]
 }
